@@ -1,11 +1,20 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
 *{
     margin: 0;
     padding: 0;
 }
+
 body{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 2rem;
     height: 100vh;
     background-image: url(./images/fondoBackgroound.jpg);
     background-size: cover;
@@ -16,29 +25,24 @@ body{
 .conteinerFather{
     display: flex;
     justify-content: center;
-    padding: 2rem;
-    height: auto;
     max-width: 75rem;
-
+    height: 30rem;
+    max-height: 45rem;
 }
 .childConteiner{
+    width: 60%;
     background-image: url(./images/fondo.jpg);
     background-repeat: no-repeat;
-    padding: 1rem;
+    object-fit: cover;
+    height: 100%;
+    padding: 1.5rem;
 }
-.titleOne{
-    padding: 1rem;
-}
-.titleTwo{
-    padding: 1rem;
-}
-.titleTree{
-    padding: 1rem;
-}
+
 .lickStart{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    padding: 1rem 0;
+    padding: 1rem;
     
 }
 .lickStart div{
@@ -62,9 +66,54 @@ a{
     border-radius: 10px;
     font-weight: 700;
 }
-.imgTheCure{
-    padding: 0 0 1rem 0;
+
+.containerImg{
+    width: 40%;
+    height: 100%;
 }
 
-    
-    
+.containerImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width:1024px) {
+    .conteinerFather{
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        height: 100%;
+        max-height: none;
+    }
+
+    .containerImg{
+        width: 60%;
+    }
+
+    .containerImg img{
+        min-height: 500px;
+    }
+
+    body{
+        height: 100%;
+        background-size: unset;
+    }
+
+    .childConteiner, .containerImg{
+        width: 80%;
+    }
+}
+
+@media (max-width:720px){
+    .conteinerFather{
+        width: 100%;
+    }
+    .childConteiner, .containerImg{
+        width: 100%;
+    }
+
+    .childConteiner{
+        background-repeat: repeat;
+    }
+} 
