@@ -1,3 +1,9 @@
+html{
+    box-sizing: border-box;  
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
 *{
     margin: 0;
     padding: 0;
@@ -5,6 +11,7 @@
 body{
     display: flex;
     justify-content: center;
+    /*padding: 2rem;*/
     align-items: center;
     height: 100vh;
     background-image: url(./images/fondoBackgroound.jpg);
@@ -16,34 +23,38 @@ body{
 .conteinerFather{
     display: flex;
     justify-content: center;
-    padding: 2rem;
-    height: auto;
+    height: 30rem;
     max-width: 75rem;
 
 }
 .childConteiner{
+    width: 60%;
     background-image: url(./images/fondo.jpg);
     background-repeat: no-repeat;
-    padding: 1rem;
+    object-fit: cover;
+    height: 100%;
+    padding: 1.5rem;
+    
 }
-.titleOne{
-    padding: 1rem;
+.childConteiner p{
+    padding: 10px;
+    font-family: "Permanent Marker", cursive;
+    font-weight: 600;
 }
-.titleTwo{
-    padding: 1rem;
-}
-.titleTree{
-    padding: 1rem;
+
+.titleTree p{
+    font-weight: 600;
+    color: #424349;
 }
 .lickStart{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    padding: 1rem 0;
-    
+    padding: 1rem;
 }
 .lickStart div{
     padding: 0 1rem;
-    width: 10rem;
+    width: 12rem;
     height: 4rem;
     display: flex;
     align-items: center;
@@ -62,8 +73,58 @@ a{
     border-radius: 10px;
     font-weight: 700;
 }
-.imgTheCure{
-    padding: 0 0 1rem 0;
+a:hover{
+    background-color: #424349;
+}
+.conteinerImg{
+    width: 40%;
+    height: 100%;
+}
+.conteinerImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media (max-width:1024px) {
+    .conteinerFather{
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        height: 100%;
+        max-height: none;
+    }
+    .conteinerImg{
+        width: 60%;
+    }
+    .conteinerImg img{
+        min-height: 500px;
+    }
+    body{
+        height: 100%;
+        background-size: unset;
+    }
+    .childConteiner, .conteinerImg{
+        width: 80%;
+    }
+    .childConteiner{
+        padding: 0;
+    }
+}
+@media (max-width:720px){
+    .conteinerFather{
+        width: 100%;
+    }
+    .childConteiner, .conteinerImg{
+        width: 100%;
+    }
+    .childConteiner{
+        background-repeat: repeat;
+    }
+    .lickStart div{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
 }
 
     
