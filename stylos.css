@@ -125,6 +125,12 @@ a:hover{
         align-items: center;
         flex-direction: column;
     }
+    .titleTwo h1{
+        text-align: center;
+    }
+    .titleTree{
+        padding: 1rem;
+    }
 }
 
     
