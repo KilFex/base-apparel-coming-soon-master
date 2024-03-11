@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(./images/fondoBackgroound.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: "Josefin Sans", sans-serif;
+}
+.conteinerFather{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    height: auto;
+    max-width: 75rem;
+
+}
+.childConteiner{
+    background-image: url(./images/fondo.jpg);
+    background-repeat: no-repeat;
+    padding: 1rem;
+}
+.titleOne{
+    padding: 1rem;
+}
+.titleTwo{
+    padding: 1rem;
+}
+.titleTree{
+    padding: 1rem;
+}
+.lickStart{
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    
+}
+.lickStart div{
+    padding: 0 1rem;
+    width: 10rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    
+}
+a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    height: 3rem;
+    text-decoration: none;
+    margin-bottom: 10px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    font-weight: 700;
+}
+.imgTheCure{
+    padding: 0 0 1rem 0;
+}
+
+    
+    
